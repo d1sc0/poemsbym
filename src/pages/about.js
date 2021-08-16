@@ -3,15 +3,16 @@ import * as React from 'react'
 import Layout from '../components/layout'
 
 // Define component
-const IndexPage = () => {
+const AboutPage = () => {
     return (
-        <Layout pageTitle='Home Page'>
+        <Layout pageTitle='About Me'>
             <p className='p-4'>
-                I'm making this by following the Gatsby Tutorial.
+                Hi there! I'm the proud creator of this site, which I built with
+                Gatsby.
             </p>
         </Layout>
     )
 }
 
 // Export component
-export default IndexPage
+export default AboutPage
