@@ -1,10 +1,10 @@
 // Imports
 import * as React from 'react'
 import { Link, graphql } from 'gatsby'
-import Layout from '../components/layout'
+import Layout from '../../components/layout'
 
 // Define component
-const IndexPage = ({ data }) => {
+const PoemsIndex = ({ data }) => {
     return (
         <Layout pageTitle='Poems'>
             <p className='p-4'>
@@ -15,9 +15,6 @@ const IndexPage = ({ data }) => {
                                 {node.frontmatter.title}
                             </Link>
                         </strong>
-                        <div>
-                            <small>Published: {node.frontmatter.pubDate}</small>
-                        </div>
                     </div>
                 ))}
             </p>
@@ -25,7 +22,7 @@ const IndexPage = ({ data }) => {
     )
 }
 
-// GraphQL query
+// graphQL query
 export const data = graphql`
     query {
         allMdx(sort: { fields: frontmatter___pubDate, order: DESC }) {
@@ -42,4 +39,4 @@ export const data = graphql`
 `
 
 // Export component
-export default IndexPage
+export default PoemsIndex

@@ -23,7 +23,7 @@ const Layout = ({ pageTitle, children }) => {
             <header>{data.site.siteMetadata.title}</header>
             <nav className='bg-yellow-300'>
                 <div className=''>
-                    <Link to='/'>Poems</Link>
+                    <Link to='/poems/'>Poems</Link>
                 </div>
                 <div className=''>
                     <Link to='/about'>About</Link>
