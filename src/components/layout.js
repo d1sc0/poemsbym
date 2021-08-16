@@ -1,14 +1,31 @@
+// Imports
 import * as React from 'react'
-import { Link } from 'gatsby'
+import { Link, graphql, useStaticQuery } from 'gatsby'
+
+// Define component
 const Layout = ({ pageTitle, children }) => {
+    // StaticQuery
+    const data = useStaticQuery(graphql`
+        query {
+            site {
+                siteMetadata {
+                    title
+                }
+            }
+        }
+    `)
+
     return (
         <div>
-            <title>{pageTitle}</title>
-            <nav className='bg-yellow-300 grid grid-cols-4 gap-2'>
-                <div className='text-center border-2 col-start-2'>
-                    <Link to='/'>Home</Link>
+            <title>
+                {pageTitle} | {data.site.siteMetadata.title}
+            </title>
+            <header>{data.site.siteMetadata.title}</header>
+            <nav className='bg-yellow-300'>
+                <div className=''>
+                    <Link to='/'>Poems</Link>
                 </div>
-                <div className='text-center border-2 col-start-3'>
+                <div className=''>
                     <Link to='/about'>About</Link>
                 </div>
             </nav>
@@ -19,4 +36,6 @@ const Layout = ({ pageTitle, children }) => {
         </div>
     )
 }
+
+// Export component
 export default Layout
