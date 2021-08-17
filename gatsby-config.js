@@ -43,7 +43,7 @@ module.exports = {
             resolve: 'gatsby-source-filesystem',
             options: {
                 name: 'poems',
-                path: './src/poems/',
+                path: './poems/',
             },
             __key: 'poems',
         },

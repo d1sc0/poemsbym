@@ -5,19 +5,25 @@ import Layout from '../../components/layout'
 
 // Define component
 const PoemsIndex = ({ data }) => {
+    const pageTitle = 'Poems'
     return (
-        <Layout pageTitle='Poems'>
-            <p className='p-4'>
-                {data.allMdx.nodes.map((node) => (
-                    <div key={node.id}>
-                        <strong>
-                            <Link to={`/poems/${node.slug}`}>
-                                {node.frontmatter.title}
-                            </Link>
-                        </strong>
-                    </div>
-                ))}
-            </p>
+        <Layout pageTitle={pageTitle}>
+            <div className='font-sans'>
+                <h1 className='font-bold font-sans break-normal text-gray-900 pt-6 pb-2 text-3xl md:text-4xl'>
+                    {pageTitle}
+                </h1>
+                <div className='py-6'>
+                    {data.allMdx.nodes.map((node) => (
+                        <ul>
+                            <li key={node.id}>
+                                <Link to={`/poems/${node.slug}`} className=''>
+                                    {node.frontmatter.title}
+                                </Link>
+                            </li>
+                        </ul>
+                    ))}
+                </div>
+            </div>
         </Layout>
     )
 }

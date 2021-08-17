@@ -8,8 +8,17 @@ import Layout from '../../components/layout'
 const PoemPost = ({ data }) => {
     return (
         <Layout pageTitle={data.mdx.frontmatter.title}>
-            <p>{data.mdx.frontmatter.date}</p>
-            <MDXRenderer>{data.mdx.body}</MDXRenderer>
+            <div className='font-sans'>
+                <h1 className='font-bold font-sans break-normal text-gray-900 pt-6 pb-2 text-3xl md:text-4xl'>
+                    {data.mdx.frontmatter.title}
+                </h1>
+                <p className='text-sm md:text-base font-normal text-gray-600'>
+                    Published {data.mdx.frontmatter.pubDate}
+                </p>
+                <div className='py-6'>
+                    <MDXRenderer>{data.mdx.body}</MDXRenderer>
+                </div>
+            </div>
         </Layout>
     )
 }

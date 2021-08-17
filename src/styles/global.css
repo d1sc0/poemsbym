@@ -2,3 +2,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+    @apply bg-gray-100;
+    @apply font-sans;
+}
+
+a {
+    @apply text-blue-500;
+    @apply underline;
+}
+
+a:hover {
+    @apply text-red-600;
+}
