@@ -1,0 +1,10 @@
+---
+label: Poem
+hide_body: false
+fields:
+- type: text
+  name: title
+  label: title
+- type: datetime
+  name: pubDate
+  label: pubDate
