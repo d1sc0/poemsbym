@@ -8,14 +8,14 @@ import Layout from '../../components/layout'
 const PoemPost = ({ data }) => {
     return (
         <Layout pageTitle={data.mdx.frontmatter.title}>
-            <div className='font-sans'>
+            <div className='font-sans text-center'>
                 <h1 className='font-bold font-sans break-normal text-gray-900 pt-6 pb-2 text-3xl md:text-4xl'>
                     {data.mdx.frontmatter.title}
                 </h1>
                 <p className='text-sm md:text-base font-normal text-gray-600'>
                     Published {data.mdx.frontmatter.pubDate}
                 </p>
-                <div className='py-6'>
+                <div className='py-6 font-serif leading-loose font-light'>
                     <MDXRenderer>{data.mdx.body}</MDXRenderer>
                 </div>
             </div>

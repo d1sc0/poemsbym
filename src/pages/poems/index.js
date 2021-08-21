@@ -8,11 +8,11 @@ const PoemsIndex = ({ data }) => {
     const pageTitle = 'Poems'
     return (
         <Layout pageTitle={pageTitle}>
-            <div className='font-sans'>
+            <div className='font-sans text-center'>
                 <h1 className='font-bold font-sans break-normal text-gray-900 pt-6 pb-2 text-3xl md:text-4xl'>
                     {pageTitle}
                 </h1>
-                <div className='py-6'>
+                <div className='py-6 text-center font-serif'>
                     {data.allMdx.nodes.map((node) => (
                         <ul>
                             <li key={node.id}>
