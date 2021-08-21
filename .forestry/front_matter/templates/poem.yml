@@ -8,3 +8,5 @@ fields:
 - type: datetime
   name: pubDate
   label: pubDate
+pages:
+- poems/test.mdx
